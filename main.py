@@ -7,7 +7,7 @@ def play(fps):
   for b in anim[c]:
    if isinstance(b, float) == False: print(b)
    else: timer = b
-  time.sleep(timer)
+ time.sleep(timer)
  if name == 'nt': _ = system('cls') 
  else: _ = system('clear')
  timer = fps
