@@ -8,6 +8,6 @@ def play(fps):
    if isinstance(b, float) == False: print(b)
    else: timer = b
   time.sleep(timer)
-  if name == 'nt': _ = system('cls') 
-  else: _ = system('clear')
-  timer = fps
+ if name == 'nt': _ = system('cls') 
+ else: _ = system('clear')
+ timer = fps
