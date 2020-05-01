@@ -30,21 +30,23 @@ f5 =  [
 " ",
 "#"
 ]
-
+def printa(a):
+  for b in a:
+    print(b)
 def play(fps):
-  print(f1)
+  printa(f1)
   time.sleep(fps)
   clear()
-  print(f2)
+  printa(f2)
   time.sleep(fps)
   clear()
-  print(f3)
+  printa(f3)
   time.sleep(fps)
   clear()
-  print(f4)
+  printa(f4)
   time.sleep(fps)
   clear()
-  print(f5)
+  printa(f5)
   time.sleep(fps)
   clear()
   
