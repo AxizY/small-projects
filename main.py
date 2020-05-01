@@ -11,7 +11,6 @@ def play(fps):
   if name == 'nt': _ = system('cls') 
   else: _ = system('clear')
   timer = fps
-
 def hold(t):
   print("")
   time.sleep(t)
