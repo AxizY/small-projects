@@ -1,6 +1,4 @@
-from os import system, name 
-import time
-anim=[]
+from os import system, name;import time;anim=[]
 def play(fps):
  timer = fps
  for c in range(len(anim)):
@@ -11,6 +9,4 @@ def play(fps):
   if name == 'nt': _ = system('cls') 
   else: _ = system('clear')
   timer = fps
-def hold(t):
-  print("")
-  time.sleep(t)
+def hold(t):print("");time.sleep(t)
