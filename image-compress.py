@@ -2,7 +2,7 @@ import cv2
 import math
 def compress(num,n):return(math.ceil(num/n))
 values = []
-img = cv2.imread(r'photo', 0)
+img = cv2.imread(r'PHOTO LOCATION', 0)
 x=0;y=0;a=0;k=0
 for y in range(0, img.shape[0]):
   for x in range(0, img.shape[1]):
