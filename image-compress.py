@@ -1,12 +1,15 @@
-import cv2
-import math
-def compress(num,n):return(math.ceil(num/n))
-values = []
-img = cv2.imread(r'PHOTO LOCATION', 0)
-x=0;y=0;a=0;k=0
-for y in range(0, img.shape[0]):
-  for x in range(0, img.shape[1]):
-    values.append(compress(img[y,x],img.shape[0])) 
-for a in range(0,compress(len(values),img.shape[1])):
-  k = a-1
-  print(values[img.shape[1]*k:a*img.shape[1]])
+import cv2 # a module/library for handling images
+import math # a module/library for handling math functions etc
+import os # a built-in library for handling everything (terminal commands)
+import sys # for handling terminal arguments
+values="" # an empty string/text
+f=open("pixeldata.txt", "a+")
+img = cv2.imread(str(sys.argv[1]).encode('unicode-escape').decode(), 0) # specifies image location on computer - converts image to grayscale
+for y in range(0, img.shape[0]): # for every y
+  for x in range(0, img.shape[1]): # for every x in that y
+    values+="  "+str(math.ceil(img[y,x]/int(sys.argv[2]))) # adds (the pixel grayscale value divided by the y is then rounded up) to the string
+  values+="\n" # adds a new line to the string
+open("pixeldata.txt", 'w').close() # clears file content
+f.write(values) # writes the new values
+print("Values have been appended/replaced!") # prints out the results/ the string
+os.system("open pixeldata.txt") # opens textedit may not work on windows
