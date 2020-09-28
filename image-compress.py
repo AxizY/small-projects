@@ -13,3 +13,7 @@ open("pixeldata.txt", 'w').close() # clears file content
 f.write(values) # writes the new values
 print("Values have been appended/replaced!") # prints out the results/ the string
 os.system("open pixeldata.txt") # opens textedit may not work on windows
+# to run do
+# python3 scriptlocation imagelocation 120
+# in terminal ex.
+# python3 image-compress.py avenger.png 120
